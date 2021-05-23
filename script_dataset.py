@@ -68,53 +68,6 @@ def dataset_creation(key="", img_num=50):
       page +=1
       if (len(os.listdir(woman_path))>=img_num and len(os.listdir(man_path))>=img_num): break
   
-"""
-def dataset_creation(key="", img_num=50):
-
-  count_id = 1
-  imgbase_path = "https://www.themoviedb.org/t/p/w400/"
-  test = requests.get(f"https://api.themoviedb.org/3/person/{count_id}?api_key={key}&language=en-US").status_code
-
-  if test != 200 :
-    print('Invalid API key !')
-    return 0
-  
-  if img_num < 1:
-    print("The number of image should be at least greater than 1 !")
-    return 0
-
-
-  project_path = os.getcwd()
-  woman_path = os.path.join(project_path, 'Female')
-  man_path = os.path.join(project_path, 'Male')
-
-  try:
-    os.makedirs(woman_path)
-    os.makedirs(man_path)
-  except:
-    pass
-
-  while (len(os.listdir(woman_path))<img_num or len(os.listdir(man_path))<img_num):
-
-    req = requests.get(f"https://api.themoviedb.org/3/person/{count_id}?api_key={key}&language=en-US")
-    data = req.json()
-
-    if req.status_code == 200 : 
-      if data['profile_path']:
-
-        if int(data['gender']) == 1 and len(os.listdir(woman_path))<img_num:
-          img = requests.get(imgbase_path+data['profile_path'])
-          with open(os.path.join(woman_path, f'{count_id}.jpg'), 'wb') as file:
-            file.write(img.content)
-
-        elif int(data['gender']) == 2 and len(os.listdir(man_path))<img_num:
-          img = requests.get(imgbase_path+data['profile_path'])
-          with open(os.path.join(man_path, f'{count_id}.jpg'), 'wb') as file:
-            file.write(img.content)
-
-    count_id += 1
-
-"""
 
 if __name__ =='__main__':
   if len(sys.argv) < 2 : dataset_creation()

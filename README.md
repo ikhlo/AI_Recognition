@@ -20,9 +20,9 @@ Some warning messages may appear and the your webcam will open itself automatica
   
 
 ## You will find in this repositery : 
-* The [Scrapping function](https://github.com/ikhlo/AI_Recognition/blob/main/rapport/Player_Value_Prediction.pdf)
-* The [Modelling Notebook](https://github.com/ikhlo/AI_Recognition/blob/main/Scrapping/Scrapping_fifaindex_function.py)
-* The [lauching computer vision function](https://github.com/ikhlo/AI_Recognition/tree/main/Modeling)
+* The [Scrapping function](https://github.com/ikhlo/AI_Recognition/blob/main/script_dataset.py)
+* The [Modelling Notebook](https://github.com/ikhlo/AI_Recognition/blob/main/gender_recognition_Notebook.ipynb)
+* The [lauching computer vision function](https://github.com/ikhlo/AI_Recognition/blob/main/gender_recognition_cv.py)
 <br> 
 
 
